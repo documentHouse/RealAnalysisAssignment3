@@ -18,7 +18,7 @@
 %\renewcommand{\textfraction}{0.07}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
-\title{Real Analysis $\mathbb{I}$: \\ Assignment 2}
+\title{Real Analysis $\mathbb{I}$: \\ Assignment 3}
 \author{Andrew Rickert}
 \date{Started: March 13, 2011 \\ \hspace{1pt} Ended: March ??  2010}                                           % Activate to display a given date or no date
 
@@ -32,6 +32,32 @@
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+We need to show how the norm can define a metric on $\mathbb{R}$. Suppose we are given the definition of the norm as in the problem. We define the metric to based on the norm as $d(p,q) \equiv \|p-q\|$.\\
+\indent We know need to verify that the metric defined in this way satisfies the axioms for a metric.
+First we need to show that 
+\begin{equation}
+d(p,q) > 0 \; \text{if} \; p \neq q \; \text{and} \; d(p,p) = 0 \label{rule1}
+\end{equation} 
+From rule i) for the norm we know that $d(p,q) = \|p-q\| \ge 0$,  since also we have that $\|x\| = 0 \iff x = 0$ we know that $p-q \ne 0 \implies \|p-q\| \neq 0$. So, if $p \neq q$ then $d(p,q) \neq 0$ which shows $d(p,q) > 0$ and completes the first part of (\ref{rule1}). From the definition of the metric we have $d(p,p) = \|p - p\| = \| 0 \| = 0$ again by rule (i). The completes the second part of (\ref{rule1}).\\
+\indent Next we have to show that 
+\begin{equation}
+d(p,q) = d(q,p) \label{rule2}
+\end{equation} 
+According to rule (ii) it is true that $\| \lambda x \| = |\lambda| \|x \|$. We perform the following calculation.
+\begin{eqnarray*}
+d(p,q) & = & \| p - q \| \\
+            & = & \| (-1) (q - p) \| \\
+            & = & |-1| \|q - p\| \; \text{by rule (ii)} \\
+            & = & \| q - p \| = d(q,p)
+\end{eqnarray*}
+We are given rule (iii) as $\| x+ y \| =  \| x \|  +  \| y \|$. The calculation to verify that $d(p,q) \le d(p,r) + d(r,q)$ goes as follows:
+\begin{eqnarray*}
+d(p,q) & = & \| p - q \| \\
+	  & = & \| p - r + r - q \| \\
+	  & = & \| p - r \| + \| r - q \| \; \text{by rule (iii)} \\
+	  & = & d(p,r) + d(r,q)
+\end{eqnarray*}
+This verifies all of the properties of the metric based on the norm defined in the problem.
 
 \vspace{15pt}
 \begin{flushleft} 
