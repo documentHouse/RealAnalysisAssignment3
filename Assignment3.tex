@@ -59,12 +59,33 @@ d(p,q) & = & \| p - q \| \\
 \end{eqnarray*}
 This verifies all of the properties of the metric based on the norm defined in the problem.
 
+\newpage
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 2\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+In order to show that $d_1(x,y) = \frac{d(x,y)}{1 + d(x,y)}$ is a metric, given that $d(x,y)$ is, we will use the definition of $d_1(x,y)$ to show the three properties of the metric are satisfied.\\
+\indent First we need to $d_1(x,y) > 0$ if $x \neq y$ and $d(x,x) = 0$ otherwise. Now since $d(x,y) > 0$ if $x \neq y$ then $1 + d(x,y) > 1 > 0$ so $1+ d(x,y) > 0$ therefore we have $\frac{d(x,y)}{1 + d(x,y)} > 0$ by the field axioms. Also, because $d(x,x) = 0$ by definition, $d_1(x,x) = \frac{d(x,y)}{1 + d(x,y)} = \frac{0}{1 + 0} = 0$.\\
+\indent Next we show that $d_1(x,y)$ is symmetric. This is clear from the following calculation
+\begin{eqnarray*}
+d_1(x,y) & = & \frac{d(x,y)}{1 + d(x,y)} \\
+	      & = & \frac{d(y,x)}{1 + d(y,x)} \quad \text{By the symmetry of $d(x,y)$} \\
+	      & = & d_1(y,x)
+\end{eqnarray*}
+Finally we need to show that $d_1(x,y)$ satisfies the triangle inequality. From the definition of the metric $d$ we have that $d(x,z) \le d(x,y) + d(y,z)$ and similarly $1+ d(x,z) \le 1+ d(x,y) + d(y,z)$. Because $d(p,q) > 0$ for all $p, q$we can divide the first expression by second to get\\
+\begin{eqnarray}
+d_1(x,y) & = & \frac{d(x,y)}{1 + d(x,y)} \le \frac{d(x,y)+ d(y,z)}{1+ d(x,y) + d(y,z)} \nonumber \\ 
+	      & = & \frac{d(x,y)}{1+ d(x,y) + d(y,z)} + \frac{d(y,z)}{1+ d(x,y) + d(y,z)} \label{largeTriangle}
+\end{eqnarray}
+Now both $0 \le d(x,y)$ and $0 \le d(y,z)$ from the definition of $d(p,q)$ so we have in the first instance  $0 \le d(x,y) \implies 1 + d(y,z) \le 1 + d(x,y) + d(y,z) \implies \frac{1}{1 + d(x,y) + d(y,z)} \le \frac{1}{1 + d(y,z)}$ and by a similar calculation we have $ \frac{1}{1 + d(x,y) + d(y,z)} \le \frac{1}{1 + d(x,y)}$. Using these expressions in (\ref{largeTriangle}) we get the following 
+\begin{eqnarray*}
+d_1(x,y) & \le & \frac{d(x,y)}{1+ d(x,y) + d(y,z)} + \frac{d(y,z)}{1+ d(x,y) + d(y,z)}  \\
+	      & \le  &  \frac{d(x,y)}{1+ d(x,y)} +  \frac{d(y,z)}{1+ d(y,z)} \\
+	      & = & d_1(x,y) + d_1(y,z)
+\end{eqnarray*}
+This completes the demonstration of the third property of the metric.
 
 \vspace{15pt}
 \begin{flushleft} 
