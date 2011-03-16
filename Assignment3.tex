@@ -93,6 +93,13 @@ This completes the demonstration of the third property of the metric.
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+\noindent Part a) Show $A^\circ \cup B^\circ \subset (A \cup B)^\circ$ \\ \newline
+\indent Assume that $x \in A^\circ \cup B^\circ$, this means either $x \in A^\circ$ or $x \in B^\circ$. Suppose that $x \in A^\circ$, then there is a neighborhood containing $N(x)$ such that $N(x) \subset A$ by the definition of $A^\circ$. This means that also $N(x) \subset A \cup B$, that is to say $x \in (A \cup B)^\circ$. The conclusion for the case where $x \in B^\circ$ is similar we have therefore that $A^\circ \cup B^\circ \subset (A \cup B)^\circ$. \newline
+
+\newpage
+ \noindent Part b) Show $A^\circ \cap B^\circ = (A \cap B)^\circ$ \\ \newline
+ \indent Assume that $x \in A^\circ \cap B^\circ$ then $x \in A^\circ$ and $x \in B^\circ$. From the definition of the interior we have a neighborhood around x in A, $N_{\delta_1}(x) \subset A$ and a neighborhood around x in B, $N_{\delta_2}(x) \subset B$. Since the intersection of two open sets is open and $x \in N_{\delta_1}(x) \cap N_{\delta_2}(x)$ there must be a neighborhood of x in the intersection so $N_\delta(x) \subset N_{\delta_1}(x) \cap N_{\delta_2}(x)$ where $\delta \le \delta_1$ and $\delta \le \delta_2$. This shows that $N_\delta(x) \subset A \cap B$ which is to say that $x \in (A \cap B)^\circ$. Thus $x \in A^\circ \cap B^\circ \subset (A \cap B)^\circ$.\\
+\indent Now assume that $x \in (A \cap B)^\circ$. This means there is a neighborhood around x, $N(x)$, such that $N(x) \subset A \cap B$. This means that $N(x) \subset A$ and $N(x) \subset B$,  which by the definition of the interior means $x \in A^\circ$ and $x \in B^\circ$ therefore $x \in A^\circ \cap B^\circ$. Thus, $x \in (A \cap B)^\circ \subset A^\circ \cap B^\circ$ and we have the result.
  
 \vspace{15pt}
 \begin{flushleft} 
