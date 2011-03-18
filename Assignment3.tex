@@ -121,12 +121,29 @@ This completes the demonstration of the third property of the metric.
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
+We need to show that the set $K = \{ 0,1,\frac{1}{2}, \frac{1}{3}, \ldots, \frac{1}{n}, \ldots \}$ is compact using the definition. Suppose $U_\alpha$, a collection of open sets, is a cover of $K$. For some $\alpha_1$ we have 0 $\in U_{\alpha_1}$. Since $U_{\alpha_1}$ is open we know that there is  a neighborhood around 0, $N_l(0)$ with length $l > 0$ such that $N_l(0) \subset U_{\alpha_i}$. Since $l > 0$ and $\mathbb{N}$ is unbounded there must be a $N$ such that $n > N \ge \frac{1}{l}$, where $N - 1 < \frac{1}{l}$. This is to say $l > \frac{1}{n}$ for $n > N$. So, $N_l(0)$ contains 0, and all members of the set except $K _N = \{1, \frac{1}{2}, \ldots, \frac{1}{N}\}$. Because this set is finite and $K$ is covered by $U_\alpha$ there are a finite number of $\alpha_j$ such that $x \in K_N$ and $x \in U_{\alpha_j}$.  Therefore $U_{\alpha_1}$ and the finite number of $U_{\alpha_j}$ are a finite subcover of K and K is compact.
 
 \vspace{15pt}
 \begin{flushleft} 
 \textbf{Class 18.100B} - Problem 7\\
 \rule{500pt}{1pt}\\
 \end{flushleft} 
+
+%We would like to find a $\delta$ such that for any $x \in K$,  a compact subset of a metric space, the ball $B_\delta(x) \subset U_\alpha$ for some $U_\alpha \in \{U_\alpha\}_{\alpha \in I}$, an open cover of $K$.\\
+%\indent By hypothesis $\{U_\alpha\}_{\alpha \in I}$ is an open cover of K so for all $x \in K$ we have $x \in U_{\alpha_i}$ for some $i \in I$. Since each set in the open cover is open there is an open ball around $x, B(x)$,  such that $B(x) \subset U_{\alpha_i}$. Because there is an open ball around every member of $K$ this constitutes an open cover of $K$ as well. By the compactness of $K$ there is a finite subset of the open balls that cover the set, $\{ B_{\delta_1}(x_1), B_{\delta_2}(x_2), \ldots, B_{\delta_n}(x_n) \}$.
+
+\vspace{15pt}
+\begin{flushleft} 
+\textbf{Class 18.100B} - Extra Problem 1\\
+\rule{500pt}{1pt}\\
+\end{flushleft} 
+Show that a nonempty set M with d having the following properties is a metric space: \\
+i) $d(x,y) = 0 \iff x = y$\\
+ii) $d(x,y) \le d(x,z) + d(y,z)$ \\ \newline
+\indent First we show that $d(x,y) > 0$ if $x \neq y$ which will fill out the first property of a metric space. By property (i) if $x \neq y$ then $d(x,y) \neq 0$. Assuming $x \neq y$ and using property (ii) if we let $y = x$ and $z = y$ then we get $0 = d(x,x) \le d(x,y) + d(x, y) \implies 0 \le 2 \,d(x,y) \implies 0 \le d(x,y)$. Since we have $d(x,y) \neq 0$ if $x \neq y$ we have $d(x,y) > 0$.\\
+\indent For the second property, the symmetry of the metric we use property (ii) by letting $z = x$ to get $d(x,y) \le d(x,x) + d(y,x) \implies d(x,y) \le d(y,x)$ since by property (i) $d(x,x) = 0$. Using property (ii) again we let $x = y$, $y = x$ and $z = x$ and derive $d(y,x) \le d(y,x) + d(x,x) \implies d(y,x) \le d(x,y)$. So we have $d(y,x) \le d(x,y)$ and $d(x,y) \le d(y,x)$ which means $d(x,y) = d(y,x)$ which establishes the second property of the metric.\\
+\indent With symmetry established we show the third property (the triangle inequality) easily. From property (ii) and symmetry we have $d(x,y) \le d(x,z) + d(y,z) \implies d(x,y) \le d(x,z) + d(z,y)$ which is the desired inequality.
+
 
 
 \end{document}  
