@@ -111,14 +111,17 @@ This completes the demonstration of the third property of the metric.
 \indent Suppose $x \in \partial A$, then by definition every neighborhood contains an element of $A$ and $A^c$. This means that x is also a limit point of $A$ and $A^c$ so we have $x \in \overline{A}$ and $x \in \overline{A^c}$. So we have $x \in A \cap A^c$ therefore $\partial A \subset \overline{A} \cap \overline{A^c}$.\\
 \indent Now suppose that $x \in \overline{A} \cap \overline{A^c}$. This means that x is a limit point of both $A$ and $A^c$. By the definition of the limit point this means that every neighborhood of x contains a point of $A$ and $A^c$ which is to say that $x \in \partial A$. \newline
 
-\noindent Part b) \newline
-
+\noindent Part b) Show $p \in \partial A \iff p$ is in $\overline{A}$ and not in $A^\circ$ \\ \newline
+\indent $p \in \partial A$ if every neighborhood of $p$ intersects both $A$ and $A^c$. Since every neighborhood intersects $A$, $p$ is a limit point and so is in $\overline{A}$ but, because every neighborhood intersects $A^c$ there is no neighborhood of $p$ contained in $A$. This means that
+$p$ is not in $A^\circ$. \\ 
+\indent For the other part of the conclusion we not that if $p$ is in $\overline{A}$ then $p$ is a limit point of $A$. This means that every neighborhood of $p$ intersects $A$. Since $p$ is not in the interior of $A$ there is no neighborhood of $p$ contained in $A$. This says that every neighborhood must contain points not in $A$, which is to say points in $A^c$. Since every neighborhood contains  elements of $A$ and $A^c$ we have that $p \in \partial A$.\\ \newline
 \noindent Part c) Show $\partial A$ is closed. \\ \newline
 \indent By part a, $\partial A = \overline{A} \cap \overline{A^c}$. By a theorem of rudin the closure of a set is closed. So $\partial A$ is the intersection of two closed sets. By another theorem of rudin, the intersection of two or more closed sets is closed thus $\partial A$ is closed. \newline
 
 \noindent Part d) Show, $A$ is closed $\iff \partial A \subset A$ \\
 
-Sheeeeeeeeeit
+By part (b) we have $p \in \partial A \implies p$ is in $\overline{A}$ and $p \notin A^\circ$. By a theorem of rudin, if $A$ is closed we have $A = \overline{A}$. Thus $p \in \overline{A} = A$ which establishes the first part of the theorem.\\ 
+\indent Let $p$ be a limit point of $A$. Either there is a neighborhood of p that is contained in $A$ or there isn't. If there is then this a limit point of $A$ since larger neighborhoods will contain this neighborhood and any smaller ones will be contained by the neighborhood. Thus, there is always an intersection between $A$ and a neighborhood of $p$ in this case. Suppose then that there is not containment. This means that every neighborhood must contain elements of $A^c$ which is to say that $p \in \partial A$. Since $p \in \partial A \subset A$ we have containment of the two kinds of limit points. Since A then contains all of its limit points it is closed.
 
 \vspace{15pt}
 \begin{flushleft} 
@@ -126,7 +129,6 @@ Sheeeeeeeeeit
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
-Merge.
 
 \vspace{15pt}
 \begin{flushleft} 
