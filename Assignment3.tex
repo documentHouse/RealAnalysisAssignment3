@@ -129,7 +129,16 @@ By part (b) we have $p \in \partial A \implies p$ is in $\overline{A}$ and $p \n
 \rule{500pt}{1pt}\\
 \end{flushleft} 
 
-For the first part of the problem we need to show that the closure of the open ball is the closed ball. First we note that by the definition of the closure $B_r(x) \subset \overline{B_r(x)}$, where $B_r(x) = \{ y \; | \; d(x,y) < r\}$. So we need to show that the limit points of $B_r(x)$ along with $B_r(x)$ itself are the closed ball.  
+For the first part of the problem we need to show that the closure of the open ball is the closed ball. First we note that by the definition of the closure $B_r(x) \subset \overline{B_r(x)}$, where $B_r(x) = \{ y \; | \; d(x,y) < r\}$. So we need to show that the limit points of $B_r(x)$ along with $B_r(x)$ itself are the closed ball.  \\
+\indent Consider a point $z$ that is at the 'edge' of $B_r(x)$, so $d(x,z) = r$. Let $N_\epsilon(z)$ be a $\epsilon$ - neighborhood around $z$. Now  we choose $q = (1-\frac{1}{2}\epsilon)(z-x)+ x$. \\
+\indent First we note that $d(x,q) =\|(1-\frac{1}{2}\epsilon)(z-x)+x - x \| = \|(1-\frac{1}{2}\epsilon)(z-x) \| = (1-\frac{1}{2}\epsilon) \|z - x \| = (1-\frac{1}{2}\epsilon) r < r$. So $q \in B_r(x)$. Now we must show that this point is in the neighborhood $N_\epsilon(z)$ and because $\epsilon$ is arbitrary it would follow that $z$ is a limit point and is in the closure.\\
+\indent Let us consider $d(z,q)$. From the definition of $q$ we know that 
+\begin{eqnarray*}
+d(z,q) & = & \| (1-\frac{1}{2}\epsilon)(z-x) + x -z \| \\
+	  & = & \| (1-\frac{1}{2}\epsilon)(z-x) - (z -x) \| \\
+	  & = & \| -\frac{1}{2}\epsilon(z-x) \| \\
+\end{eqnarray*}
+
 
 
 \vspace{15pt}
