@@ -20,7 +20,7 @@
 
 \title{Real Analysis $\mathbb{I}$: \\ Assignment 3}
 \author{Andrew Rickert}
-\date{Started: March 13, 2011 \\ \hspace{1pt} Ended: March ??  2010}                                           % Activate to display a given date or no date
+\date{Started: March 13, 2011 \\ \hspace{1pt} Ended: April 8  2010}                                           % Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -130,16 +130,21 @@ By part (b) we have $p \in \partial A \implies p$ is in $\overline{A}$ and $p \n
 \end{flushleft} 
 
 For the first part of the problem we need to show that the closure of the open ball is the closed ball. First we note that by the definition of the closure $B_r(x) \subset \overline{B_r(x)}$, where $B_r(x) = \{ y \; | \; d(x,y) < r\}$. So we need to show that the limit points of $B_r(x)$ along with $B_r(x)$ itself are the closed ball.  \\
-\indent Consider a point $z$ that is at the 'edge' of $B_r(x)$, so $d(x,z) = r$. Let $N_\epsilon(z)$ be a $\epsilon$ - neighborhood around $z$. Now  we choose $q = (1-\frac{1}{2}\epsilon)(z-x)+ x$. \\
-\indent First we note that $d(x,q) =\|(1-\frac{1}{2}\epsilon)(z-x)+x - x \| = \|(1-\frac{1}{2}\epsilon)(z-x) \| = (1-\frac{1}{2}\epsilon) \|z - x \| = (1-\frac{1}{2}\epsilon) r < r$. So $q \in B_r(x)$. Now we must show that this point is in the neighborhood $N_\epsilon(z)$ and because $\epsilon$ is arbitrary it would follow that $z$ is a limit point and is in the closure.\\
+\indent Consider a point $z$ that is at the 'edge' of $B_r(x)$, so $d(x,z) = r$. Let $N_{r \epsilon}(z)$ be a  neighborhood which contains all points which are distance $d(x,y) < r \epsilon$. Now  we choose $q = (1-\frac{1}{2}\epsilon)(z-x)+ x$. \\
+\indent First we note that $d(x,q) =\|(1-\frac{1}{2}\epsilon)(z-x)+x - x \| = \|(1-\frac{1}{2}\epsilon)(z-x) \| = (1-\frac{1}{2}\epsilon) \|z - x \| = (1-\frac{1}{2}\epsilon) r < r$. So $q \in B_r(x)$. Now we must show that this point is in the neighborhood $N_{r \epsilon}(z)$ and because $\epsilon$ is arbitrary it would follow that $z$ is a limit point and is in the closure.\\
 \indent Let us consider $d(z,q)$. From the definition of $q$ we know that 
 \begin{eqnarray*}
 d(z,q) & = & \| (1-\frac{1}{2}\epsilon)(z-x) + x -z \| \\
 	  & = & \| (1-\frac{1}{2}\epsilon)(z-x) - (z -x) \| \\
 	  & = & \| -\frac{1}{2}\epsilon(z-x) \| \\
+	  & = & \frac{1}{2}\epsilon \| (z-x) \| \\
+	  & = & \frac{1}{2}\epsilon r < r \epsilon
 \end{eqnarray*}
 
+So we have $q \in N_{r \epsilon}(z)$. This shows that we can always find a point of $B_r(x)$ in a neighborhood around $z$ so $z$ is a limit point and is in the closure.\\
+\indent Now if we have $y$ such that $d(x,y) = s > r$ then we can find a value such that $s > \lambda > r$. It is clear that the neighborhood $N_\lambda(y)$ would not intersect $B_r(x)$ so the set of all v such $d(x,v) \le r$ contains all of the points in the closure.
 
+If we take the metric to be $d(x,y) = 0$ for $x = y$ and $d(x,y) = 1$ otherwise then this metric allows set which do not have the analogous property. Consider the set $\{ y | d(x,y) < 2 \}$. The closure of this set would contain all of the same elements and since $d(x,y) = 1 < 2$ for all $x \neq y$ the closure would also be the set $\{ y | d(x,y) < 2 \}$.
 
 \vspace{15pt}
 \begin{flushleft} 
